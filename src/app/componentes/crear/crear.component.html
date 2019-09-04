@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col"></div>
+    <div class="col-md-6 col-lg-6">
+        <div class="card bg-dark text-white mt-2">
+            <div class="card-header text-center">
+                <h3>Agregar Libro</h3>
+            </div>
+            <div class="card-body">
+                <div *ngIf="libro">
+                    <br>
+                    <input #frm type="hidden" [(ngModel)]="nuevoLibro.idlibro">
+                   
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                               <label for="titulo" class="frm" ><span class="input-group-text">Título:</span></label>
+                            </div><input id="titulo"  class="form-control text-right" [(ngModel)]="nuevoLibro.titulo">
+                        </div>
+                    
+                   
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                               <label for="autor" class="frm"><span class="input-group-text">Autor:</span></label> 
+                            </div><input id="autor" name="autor" class="form-control text-right" [(ngModel)]="nuevoLibro.autor">
+                        </div>
+                    
+                   
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label for="edicion" class="frm" ><span class="input-group-text">Edición:</span></label>
+                            </div><input id="edicion"  class="form-control text-right" [(ngModel)]="nuevoLibro.edicion">
+                        </div>
+                   
+                  
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label for="numcopias" class="frm"><span class="input-group-text">Num. Copias:</span></label> 
+                            </div><input id="numcopias"  class="form-control text-right" [(ngModel)]="nuevoLibro.numcopias">
+                        </div>
+                  
+                    <button class="btn btn-outline-info btn-lg float-right"
+                            (click)="postLibro(); frm.reset()">POST</button>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col"></div>
+</div>
+
