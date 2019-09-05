@@ -10,6 +10,7 @@ import { EditarComponent } from './componentes/editar/editar.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,    
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
